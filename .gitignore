@@ -10,6 +10,7 @@ apply*.log
 *.pub
 *.war
 .kube/config
+*.lock.hcl
 
 # IDE/Editor data
 .idea/
