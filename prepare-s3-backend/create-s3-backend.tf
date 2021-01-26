@@ -1,9 +1,6 @@
 resource "aws_s3_bucket" "terraform-state" {
   bucket = "${var.project_name}-terraform-state"
 
-  block_public_acls   = true
-  block_public_policy = true
-
   versioning {
     enabled = true
   }
@@ -30,4 +27,11 @@ resource "aws_s3_bucket" "terraform-state" {
 resource "aws_kms_key" "state_key" {
   description = "This key is used to encrypt bucket objects - TERRAFORM STATE"
   deletion_window_in_days = 10
+}
+
+resource "aws_s3_bucket_public_access_block" "example" {
+  bucket = aws_s3_bucket.terraform-state.id
+
+  block_public_acls   = true
+  block_public_policy = true
 }
