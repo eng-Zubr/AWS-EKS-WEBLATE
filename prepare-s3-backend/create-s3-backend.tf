@@ -1,6 +1,9 @@
 resource "aws_s3_bucket" "terraform-state" {
   bucket = "${var.project_name}-terraform-state"
 
+  block_public_acls   = true
+  block_public_policy = true
+
   versioning {
     enabled = true
   }
