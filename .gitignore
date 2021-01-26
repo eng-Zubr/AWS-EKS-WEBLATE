@@ -9,6 +9,7 @@ apply*.log
 *.pem
 *.pub
 *.war
+.kube/config
 
 # IDE/Editor data
 .idea/
