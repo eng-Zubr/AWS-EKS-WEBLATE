@@ -18,6 +18,8 @@ https://learn.hashicorp.com/tutorials/terraform/install-cli
 3. Safe networks (public + private + NAT + SG) & IAM configuration
 4. Build in rolling update (possible to configure as pure blue/green) with EKS & Helm
 5. Horizontal app autoscaling
+6. Used Terraform remote state backend with encrypted s3 bucket
+7. Terraform remote state lock AW DynamoDB table
 
 ## Roll-out 
 run:
