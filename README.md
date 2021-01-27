@@ -5,7 +5,7 @@ AWS + EKS + helm
 
 ## requirements
 
-Install and configure AWS CLI, kubectl, helm & Terraform: <br />
+Install and configure AWS CLI, kubectl, helm & Terraform v 0.14+: <br />
 https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html <br />
 https://kubernetes.io/docs/tasks/tools/install-kubectl/ <br />
 https://helm.sh/docs/intro/install/ <br />
@@ -22,6 +22,12 @@ https://learn.hashicorp.com/tutorials/terraform/install-cli
 ## Roll-out 
 run:
 ```bash
+cd prepare-s3-backend
+terraform init
+terraform apply
+
+cd ..
+
 cd us-east-1
 terraform init
 terraform apply
