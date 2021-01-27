@@ -11,6 +11,6 @@ variable "aws_profile" {
 }
 
 variable "project_name" {
-  default = "eks-webplate-launchpad"
+  default = "eks-weblate"
   description = "Some test project name - lowercase"
 }
