@@ -88,7 +88,7 @@ resource "null_resource" "get-service" {
 
 resource "null_resource" "hpa" {
   provisioner "local-exec" {
-    command = "sleep 30 && kubectl autoscale deployment weblate --cpu-percent=30 --min=1 --max=3"
+    command = "kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.7/components.yaml && sleep 30 && kubectl autoscale deployment weblate --cpu-percent=30 --min=1 --max=3"
   }
   depends_on = [helm_release.weblate, null_resource.get-service]
 }
